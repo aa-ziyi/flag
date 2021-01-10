@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import './app.less'
+import "taro-ui-vue/dist/style/components/flex.scss";
+import "taro-ui-vue/dist/style/components/grid.scss"
 
 const App = new Vue({
   onShow (options) {

@@ -49,6 +49,19 @@
         提交
       </AtButton>
     </AtForm>
+
+    快速参与
+    <view class="at-row at-row--wrap">
+      <view class="at-col  at-col-6 at-col--wrap">
+        <FlagCard />
+      </view>
+      <view class="at-col at-col-6 at-col--wrap">
+        <FlagCard />
+      </view>
+      <view class="at-col at-col-6 at-col--wrap">
+        <FlagCard />
+      </view>
+    </view>
   </view>
 </template>
 <script>
@@ -59,12 +72,15 @@ import "taro-ui-vue/dist/style/components/input.scss";
 import "taro-ui-vue/dist/style/components/input-number.scss";
 import "taro-ui-vue/dist/style/components/icon.scss";
 import './index.less' 
+
+import FlagCard from '../../components/flag-card.vue';
 export default {
   components:{
     AtForm,
     AtInput,
     AtButton,
-    AtInputNumber
+    AtInputNumber,
+    FlagCard
   },
   data() {
     return {

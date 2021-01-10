@@ -23,61 +23,13 @@
     <view class="home-in-flag">
       <view class="at-row at-row--wrap">
         <view class="at-col  at-col-6 at-col--wrap">
-          <AtCard
-            note="剩余3天"
-            title="坚持吃素3天"
-            thumb="http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG"
-          >
-            <view class="flag-content">
-              <view class="flag-content-top">
-                坚持过今天，就是踏出胜利的第一步了。
-              </view>
-              <view class="flag-content-bottom">
-                <view>第一天</view>
-                <view class="color-success">
-                  今日挑成功
-                </view>
-              </view>
-            </view>
-          </AtCard>
+          <FlagCard />
         </view>
         <view class="at-col at-col-6 at-col--wrap">
-          <AtCard
-            note="剩余3天"
-            title="坚持吃素3天"
-            thumb="http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG"
-          >
-            <view class="flag-content">
-              <view class="flag-content-top">
-                坚持过今天，就是踏出胜利的第一步了。
-              </view>
-              <view class="flag-content-bottom">
-                <view>第一天</view>
-                <view class="color-success">
-                  今日挑成功
-                </view>
-              </view>
-            </view>
-          </AtCard>
+          <FlagCard />
         </view>
         <view class="at-col at-col-6 at-col--wrap">
-          <AtCard
-            note="剩余3天"
-            title="坚持吃素3天"
-            thumb="http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG"
-          >
-            <view class="flag-content">
-              <view class="flag-content-top">
-                坚持过今天，就是踏出胜利的第一步了。
-              </view>
-              <view class="flag-content-bottom">
-                <view>第一天</view>
-                <view class="color-primary">
-                  今天挑战打卡
-                </view>
-              </view>
-            </view>
-          </AtCard>
+          <FlagCard />
         </view>
       </view>
       <view class="mb20">
@@ -125,34 +77,22 @@
 <script>
 // 按需引入, 更小的应用体积
 import Taro from '@tarojs/taro';
-import { AtButton, AtToast, AtNoticebar,AtTabBar,AtCard ,AtGrid,AtFab,AtIcon,AtList, AtListItem} from 'taro-ui-vue'
-import "taro-ui-vue/dist/style/components/button.scss"
-import "taro-ui-vue/dist/style/components/toast.scss"
-import "taro-ui-vue/dist/style/components/noticebar.scss"
+import { AtButton, AtNoticebar,AtTabBar ,AtGrid,AtList, AtListItem} from 'taro-ui-vue'
+import "taro-ui-vue/dist/style/components/button.scss";
 import "taro-ui-vue/dist/style/components/tab-bar.scss";
-import "taro-ui-vue/dist/style/components/badge.scss";
-import "taro-ui-vue/dist/style/components/card.scss";
-
-import "taro-ui-vue/dist/style/components/flex.scss";
-import "taro-ui-vue/dist/style/components/grid.scss";
-import "taro-ui-vue/dist/style/components/fab.scss";
-import "taro-ui-vue/dist/style/components/icon.scss";
 import "taro-ui-vue/dist/style/components/list.scss";
-import "taro-ui-vue/dist/style/components/icon.scss";
+import "taro-ui-vue/dist/style/components/noticebar.scss";
+import FlagCard from '../../components/flag-card.vue';
 import './index.less' 
-
 export default {
     components: {
     AtButton,
-    // AtToast,
-    // AtNoticebar,
     AtTabBar,
-    AtCard,
-    AtGrid,
-    AtFab,
-    AtIcon,
     AtList, 
-    AtListItem
+    AtListItem,
+    AtGrid,
+    FlagCard,
+    // AtNoticebar,
   },
   data () {
     return {
