@@ -84,6 +84,7 @@
         <AtButton
           loading
           type="primary"
+          :on-click="handleGoAdd"
         >
           + New Flag Go
         </AtButton>
@@ -105,17 +106,17 @@
         thumb="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
       />
       <AtListItem
-        title="刚刚已完成第三天打卡，剩余"
-        note="3天素食打卡"
-        extra-text="查看心得"
+        title="标题文字"
+        note="描述信息"
+        extra-text="详细信息"
         arrow="right"
-        thumb="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
+        thumb="http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png"
       />
     </AtList>
     <AtTabBar
       fixed
       :tab-list="tabList1"
-      :on-click="handleClick"
+      :on-click="handleBottomClick"
       :current="current1"
     />
   </view>
@@ -123,6 +124,7 @@
 
 <script>
 // 按需引入, 更小的应用体积
+import Taro from '@tarojs/taro';
 import { AtButton, AtToast, AtNoticebar,AtTabBar,AtCard ,AtGrid,AtFab,AtIcon,AtList, AtListItem} from 'taro-ui-vue'
 import "taro-ui-vue/dist/style/components/button.scss"
 import "taro-ui-vue/dist/style/components/toast.scss"
@@ -138,6 +140,7 @@ import "taro-ui-vue/dist/style/components/icon.scss";
 import "taro-ui-vue/dist/style/components/list.scss";
 import "taro-ui-vue/dist/style/components/icon.scss";
 import './index.less' 
+
 export default {
     components: {
     AtButton,
@@ -146,7 +149,10 @@ export default {
     AtTabBar,
     AtCard,
     AtGrid,
-    AtFab,AtIcon,AtList, AtListItem
+    AtFab,
+    AtIcon,
+    AtList, 
+    AtListItem
   },
   data () {
     return {
@@ -159,6 +165,15 @@ export default {
     }
   },
   methods: {
+    handleGoAdd() {
+      console.log('handleGoAdd');
+      Taro.navigateTo({
+        url: '/pages/add-flag/index'
+      })
+    },
+    handleBottomClick(){
+
+    }
   },
 }
 </script>
